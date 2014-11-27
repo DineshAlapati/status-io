@@ -1,0 +1,48 @@
+{
+  "name": "status-io",
+  "version": "2.0.0",
+  "author": "Gonzalo Vazquez",
+  "description": "A companion application for AngularJS unit testing application",
+  "private": true,
+  "contributors": [
+    {
+      "name": "Gonzalo Vazquez",
+      "email": "gonzalo.segura1@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonzalovazquez/status-io.git"
+  },
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "colors": "^1.0.3",
+    "event-stream": "^3.1.7",
+    "gulp": "^3.8.10",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.4.1",
+    "gulp-filesize": "0.0.6",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^1.2.1",
+    "gulp-inject": "^1.0.2",
+    "gulp-jshint": "^1.9.0",
+    "gulp-karma": "0.0.4",
+    "gulp-livereload": "^2.1.1",
+    "gulp-load-plugins": "^0.7.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "gulp-webserver": "^0.8.7",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "~0.1.0",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "run-sequence": "^1.0.1",
+    "yargs": "^1.3.2"
+  }
+}

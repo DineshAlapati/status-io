@@ -1,0 +1,40 @@
+$font-stack:    Helvetica, sans-serif
+$main-color: #34495e
+$hover-color: #577490
+
+@import common.sass
+
+body
+	font: 100% $font-stack
+
+.note-frame
+	top: 60px
+
+#notes
+	width: 240px
+	border: 1px solid $main-color
+
+.save-btn
+	width: 240px
+	height: 30px
+	font-size: 15px
+	background-color: $main-color
+	border: none
+	color: #fff
+
+.save-btn:hover
+	background-color: $hover-color
+
+.show-notes
+	width: 100px
+	display: inline-block
+
+.show-notes button
+	height: 30px
+	font-size: 15px
+	background-color: $main-color
+	border: none
+	color: #fff
+
+.show-notes button:hover
+	background-color: $hover-color

@@ -1,0 +1,52 @@
+<div class="row pd-t20">
+	<div class="col-xs-6">
+		<p class="lead">{{ company.data.properties.name }}</p>
+		<p>{{ company.data.properties.short_description }}</p>
+	</div>
+	<div class="col-xs-6">
+		<img ng-src="{{ company.metadata.image_path_prefix + company.data.relationships.primary_image.items[0].path }}" alt="Logo" width="100" height="100">
+	</div>
+</div>
+<div class="row pd-t20">
+	<div class="col-md-12">
+		<p class="lead">Statistics</p>
+		<p><strong>Founder On: </strong>{{ company.data.properties.founded_on }}</p>
+		<p><strong>Stock Symbol: </strong>{{ company.data.properties.stock_symbol }}</p>
+		<p><strong>Num of Employess: </strong>{{ company.data.properties.number_of_employees | filter: number }}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-6">
+		<p>Category</p>
+		<ul ng-repeat="category in company.data.relationships.categories.items">
+			<li>{{ category.name }}</li>
+		</ul>
+		<p>Founders</p>
+		<ul ng-repeat="founder in company.data.relationships.founders.items">
+			<li>{{ founder.name }}</li>
+		</ul>
+		<p>Products:</p>
+		<ul ng-repeat="product in company.data.relationships.products.items">
+			<li>{{ product.name }}</li>
+		</ul>
+		<p>Offices</p>
+		<ul ng-repeat="office in company.data.relationships.offices.items">
+			<li> <strong>{{ office.name }}<strong> </li>
+			<li>{{ office.city }} , {{ office.region }} , {{ office.country }}</li>
+		</ul>
+	</div>
+	<div class="col-xs-6">
+		<p>Competitors</p>
+		<ul ng-repeat="competitors in company.data.relationships.competitors.items">
+			<li>{{ competitors.name }}</li>
+		</ul>
+		<p>Websites</p>
+		<ul ng-repeat="websites in company.data.relationships.websites.items ">
+			<li><a href="{{ websites.url }}">{{ websites.title }}</a></li>
+		</ul>
+		<p>News</p>
+		<ul ng-repeat="news in company.data.relationships.news.items">
+			<li><a href="{{ news.url }}">{{ news.title }}</a></li>
+		</ul>
+	</div>
+</div>

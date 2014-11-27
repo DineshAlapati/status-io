@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>status-io</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- inject:html -->
+	<!-- any *.html files among your sources will go here as: <link rel="import" href="FILE"> -->
+	<!-- endinject -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></script>
+	<!-- inject:css -->
+	<!-- any *.css files among your sources will go here as: <link rel="stylesheet" href="FILE"> -->
+	<!-- endinject -->
+</head>
+<body ng-app="status-io">
+	<div class="container">
+		<div ui-navbar></div>
+		<div search-bar="company"></div>
+		<div ng-if="company" class="pd-20">
+			<div company-stats="company"></div>
+		</div> <!--Hide Company data until we have something to show -->
+		<div class="row pa note-frame" ng-controller="noteCtrl">
+			<div class="col-xs-6">
+				<div class="show-notes">
+					<button ng-click="showNotes = !showNotes; retrieveNotes();">
+						{{ showNotes ? "Hide" : "Show" }} Notes
+					</button>
+				</div>
+				<div ng-if="showNotes">
+					<p>Notes</p>
+					<textarea name="notes" id="notes" cols="30" rows="10" ng-model="note"></textarea>
+					<button ng-click="storeNotes(note)" class="save-btn">
+						SAVE
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="bower_components/angularjs/angular.js"></script>
+	<!-- inject:js -->
+	<!-- any *.js files among your sources will go here as: <script src="FILE"></script> -->
+	<!-- endinject -->
+</body>
+</html>
