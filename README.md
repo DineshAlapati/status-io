@@ -14,6 +14,14 @@ A companion application for the AngularJS unit testing application.
 
 	npm install
 
+## Install Bower globally
+
+	npm install bower -g
+
+## Run Bower to install packages
+
+	bower install
+
 
 ## `gulpfile.js`
 
